@@ -1,9 +1,7 @@
 #
-# libDracoPKG - Package management library.
+# Copyright (c) 2014,2015 Ole-André Rodlie <olear@dracolinux.org>. All rights reserved.
 #
-# Copyright (c) 2014 Ole Andre Rodlie <olear@dracolinux.org>. All rights reserved.
-#
-# libDracoPKG is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License version 2.1.
+# DracoPKG is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License version 2.1.
 #
 
 CONFIG(libpkgsrc) {
@@ -26,7 +24,6 @@ CONFIG(libpkgsrc) {
     SOURCES                     += src/pkgin.cpp
 }
 
-#VERSION                          = 1.0.0
 TEMPLATE                         = lib
 QT                              -= gui
 QT                              += network
@@ -39,7 +36,7 @@ include(../DracoPKG.pri)
 
 target.path                      = $${LIBDIR}
 target_docs.path                 = $${DOCDIR}/$${TEMPLATE}$${TARGET}-$${VERSION}
-target_docs.files                = doc/README doc/COPYING.LIB
+target_docs.files                = ../README.md ../COPYING
 target_include.path              = $${INCLUDEDIR}/$${TARGET}
 target_include.files             = $${HEADERS}
 
